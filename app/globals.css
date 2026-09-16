@@ -6,6 +6,7 @@
 
 :root {
   --color-black: #000;
+  --color-black-20: rgba(0, 0, 0, 0.2);
   --color-white: #fff;
   --color-muted: #acacac;
   --color-grey: #cecece;
@@ -14,9 +15,19 @@
   --color-footer-link: #444;
   --color-text-light: #231f20;
   --container-width: 1170px;
-  --container-width-wide: 1280px;
-  --container-width-max: 1440px;
   --content-width: 750px;
+  --page-gutter: 20px;
+  --header-padding-y: 20px;
+  --header-brand-size: 60px;
+  --header-height: calc(
+    var(--header-padding-y) * 2 + var(--header-brand-size)
+  );
+}
+
+@media screen and (max-width: 479px) {
+  :root {
+    --header-padding-y: 10px;
+  }
 }
 
 html {
@@ -36,16 +47,17 @@ body {
   line-height: 1.2;
 }
 
+main {
+  padding-top: var(--header-height);
+}
+
 img {
   display: inline-block;
   max-width: 100%;
 }
 
+/* Interactive links use custom treatments (wipe, nav, cards). */
 a {
   color: var(--color-black);
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }

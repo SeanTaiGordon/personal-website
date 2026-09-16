@@ -33,6 +33,7 @@ const eslintConfig = defineConfig([
         "error",
         { extensions: [".jsx", ".tsx"] },
       ],
+      "react/require-default-props": "off",
       "import/prefer-default-export": "off",
       "import/extensions": [
         "error",
