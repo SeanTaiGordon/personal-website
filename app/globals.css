@@ -14,14 +14,12 @@
   --color-caption: #a6a6a6;
   --color-footer-link: #444;
   --color-text-light: #231f20;
-  --container-width: 1170px;
+  --container-width: 1440px;
   --content-width: 750px;
   --page-gutter: 20px;
   --header-padding-y: 20px;
   --header-brand-size: 60px;
-  --header-height: calc(
-    var(--header-padding-y) * 2 + var(--header-brand-size)
-  );
+  --header-height: calc(var(--header-padding-y) * 2 + var(--header-brand-size));
 }
 
 @media screen and (max-width: 479px) {
