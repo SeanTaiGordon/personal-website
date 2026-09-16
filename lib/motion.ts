@@ -54,10 +54,10 @@ export const motion = {
     rowWidthVw: 180,
     /** Shift that centers the 180vw row in the viewport */
     centerShiftVw: -40,
-    xAtLeft: 20,
-    xAtRight: -20,
-    restingX: 0,
-    smoothing: 0.3,
+    xAtLeft: 10,
+    xAtRight: -45,
+    restingX: -17.5,
+    smoothing: 0.2,
   },
   projectCard: {
     hoverMs: 300,
