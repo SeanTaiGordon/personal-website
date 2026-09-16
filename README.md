@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Personal Website
 
-## Getting Started
+[Personal site](https://seangordon.co.uk) for Sean Gordon (me!), a software engineer based in London. Built with Next.js App Router, React, TypeScript, and styled-components.
 
-First, run the development server:
+I've got a contact form on the deployed site for any questions, or you can raise an issue on GitHub.
+
+## Getting started
 
 ```bash
-npm run dev
-# or
+yarn
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Script        | Description            |
+| ------------- | ---------------------- |
+| `yarn dev`    | Development server     |
+| `yarn build`  | Build production       |
+| `yarn start`  | Serve production build |
+| `yarn lint`   | ESLint                 |
+| `yarn format` | Prettier format        |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project structure
 
-## Learn More
+```
+app/            Next.js routes, layout, global CSS
+components/     UI (named exports; barrel at index.ts)
+hooks/          Client interaction hooks
+lib/            Design tokens, media helpers, site nav consts, registry
+public/img/     Static images and icons
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Conventions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Named exports** for shared UI, hooks, and lib helpers.
+- **`"use client"`** where interactivity or styled-components require it.
+- **Design tokens** in `lib/motion.ts` (timings / distances) and `app/globals.css` (colors, layout variables, etc.).
+- **Nav content** in `lib/siteNav.ts`.
+- **Breakpoints** in `lib/media.ts`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Stack
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js 16 (App Router)
+- React 19
+- styled-components 6 (SSR via `StyledComponentsRegistry`)
+- ESLint (Airbnb + Next) and Prettier
