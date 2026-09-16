@@ -1,13 +1,9 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { motion, mouseTrackTransform, mq } from "@/lib";
+import { lerp, motion, mouseTrackTransform, mq } from "@/lib";
 
 const { xAtLeft, xAtRight, restingX, smoothing } = motion.footerCta;
-
-function lerp(start: number, end: number, t: number) {
-  return start + (end - start) * t;
-}
 
 /**
  * Horizontally tracks the cursor on desktop, smoothing the footer CTA row.
