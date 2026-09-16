@@ -45,6 +45,7 @@ const eslintConfig = defineConfig([
           tsx: "never",
         },
       ],
+      "import/no-extraneous-dependencies": ["error", { packageDir: __dirname }],
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": [
         "error",
