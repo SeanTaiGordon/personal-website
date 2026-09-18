@@ -1,15 +1,12 @@
-import type { Metadata } from "next";
-import {
-  CvEducation,
-  CvExperience,
-  CvHero,
-  CvSkills,
-} from "@/components/cv";
-import { ResumeStrip } from "@/components/ResumeStrip";
+import { ResumeStrip } from "@/components";
+import { CvEducation, CvExperience, CvHero, CvSkills } from "@/components/cv";
+import { pageDescriptions, pageMetadata } from "@/lib";
 
-export const metadata: Metadata = {
-  title: "CV — Sean Gordon",
-};
+export const metadata = pageMetadata({
+  title: "CV",
+  description: pageDescriptions.cv,
+  path: "/cv",
+});
 
 export default function CvPage() {
   return (

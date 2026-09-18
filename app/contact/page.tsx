@@ -1,10 +1,12 @@
-import type { Metadata } from "next";
+import { ResumeStrip } from "@/components";
 import { ContactForm, ContactHero } from "@/components/contact";
-import { ResumeStrip } from "@/components/ResumeStrip";
+import { pageDescriptions, pageMetadata } from "@/lib";
 
-export const metadata: Metadata = {
-  title: "Contact — Sean Gordon",
-};
+export const metadata = pageMetadata({
+  title: "Contact",
+  description: pageDescriptions.contact,
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

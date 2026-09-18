@@ -1,7 +1,6 @@
-import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
-import { Footer, Nav } from "@/components";
-import { StyledComponentsRegistry } from "@/lib";
+import { Footer, JsonLd, Nav } from "@/components";
+import { buildSiteJsonLd, rootMetadata, StyledComponentsRegistry } from "@/lib";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -9,11 +8,7 @@ const manrope = Manrope({
   weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
-export const metadata: Metadata = {
-  title: "Sean Gordon",
-  description:
-    "A front-end software engineer based in London specialising in React.",
-};
+export const metadata = rootMetadata;
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
@@ -24,6 +19,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <main>{children}</main>
           <Footer />
         </StyledComponentsRegistry>
+        <JsonLd data={buildSiteJsonLd()} />
       </body>
     </html>
   );

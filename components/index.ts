@@ -2,6 +2,7 @@ export { Container } from "./Container";
 export { FadeIn } from "./FadeIn";
 export { Footer } from "./footer";
 export { HorizontalScroller } from "./HorizontalScroller";
+export { JsonLd } from "./JsonLd";
 export { ResumeStrip } from "./ResumeStrip";
 export { ScrollWipeHero, WipeTitle } from "./WipeTitle";
 export { AboutBio, AboutGallery, AboutHero, AboutSkills } from "./about";

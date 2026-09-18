@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
-import { ResumeStrip } from "@/components/ResumeStrip";
+import { ResumeStrip } from "@/components";
 import {
   Hero,
   IntroLinks,
   ProjectList,
   QuoteScroller,
 } from "@/components/home";
+import { pageDescriptions, pageMetadata } from "@/lib";
 
-export const metadata: Metadata = {
-  title: "Home — Sean Gordon",
-};
+export const metadata = pageMetadata({
+  description: pageDescriptions.home,
+  path: "/",
+});
 
 export default function Home() {
   return (

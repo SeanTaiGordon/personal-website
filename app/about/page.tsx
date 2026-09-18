@@ -1,15 +1,17 @@
-import type { Metadata } from "next";
+import { ResumeStrip } from "@/components";
 import {
   AboutBio,
   AboutGallery,
   AboutHero,
   AboutSkills,
 } from "@/components/about";
-import { ResumeStrip } from "@/components/ResumeStrip";
+import { pageDescriptions, pageMetadata } from "@/lib";
 
-export const metadata: Metadata = {
-  title: "About — Sean Gordon",
-};
+export const metadata = pageMetadata({
+  title: "About",
+  description: pageDescriptions.about,
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

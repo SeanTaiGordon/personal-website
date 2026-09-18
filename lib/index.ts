@@ -9,6 +9,14 @@ export { aboutContent, type AboutGalleryOffset } from "./aboutContent";
 export { contactContent, contactLimits } from "./contactContent";
 export { cvContent, type CvEntry, type CvSkill } from "./cvContent";
 export { recaptcha } from "./recaptcha";
+export {
+  absoluteUrl,
+  buildSiteJsonLd,
+  pageDescriptions,
+  pageMetadata,
+  rootMetadata,
+  site,
+} from "./seo";
 export { breakpoints, media, mq } from "./media";
 export { interp, motion, mouseTrackTransform, lerp } from "./motion";
 export { projects, type Project } from "./projects";
