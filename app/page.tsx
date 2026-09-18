@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
+import { ResumeStrip } from "@/components/ResumeStrip";
 import {
   Hero,
   IntroLinks,
   ProjectList,
   QuoteScroller,
-  ResumeStrip,
 } from "@/components/home";
 
 export const metadata: Metadata = {

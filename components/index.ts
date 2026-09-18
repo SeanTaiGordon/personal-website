@@ -1,13 +1,10 @@
 export { Container } from "./Container";
 export { FadeIn } from "./FadeIn";
 export { Footer } from "./footer";
-export {
-  Hero,
-  IntroLinks,
-  ProjectList,
-  QuoteScroller,
-  ResumeStrip,
-} from "./home";
+export { HorizontalScroller } from "./HorizontalScroller";
+export { ResumeStrip } from "./ResumeStrip";
+export { ContactForm, ContactHero } from "./contact";
+export { Hero, IntroLinks, ProjectList, QuoteScroller } from "./home";
 export { Nav } from "./Nav";
 export { ProjectCard, type Project } from "./ProjectCard";
 export { WipeUnderline } from "./WipeUnderline";

@@ -3,6 +3,8 @@ export type SiteLink = {
   label: string;
 };
 
+export const contactEmail = "sean@seangordon.co.uk";
+
 /** Primary header navigation. */
 export const primaryNav = [
   { href: "/cv", label: "CV" },
@@ -22,7 +24,7 @@ export const footerContacts = {
     label: "LinkedIn",
   },
   email: {
-    href: "mailto:sean@seangordon.co.uk?subject=Hello",
-    label: "sean@seangordon.co.uk",
+    href: `mailto:${contactEmail}?subject=Hello`,
+    label: contactEmail,
   },
 } as const satisfies Record<string, SiteLink>;

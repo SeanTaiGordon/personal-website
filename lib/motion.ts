@@ -82,6 +82,19 @@ export const motion = {
     toX: -80,
     smoothing: 0.18,
   },
+  contact: {
+    wipeDelayMs: 300,
+    wipeMs: 800,
+    scrollHeightVh: 200,
+    trackWidthVh: 350,
+    trackMinWidthPx: 3000,
+    fromX: 0,
+    toX: -90,
+    scrollStart: 0.33,
+    smoothing: 0.18,
+    formBorderMs: 200,
+    submitMs: 200,
+  },
 } as const;
 
 export function mouseTrackTransform(xPercent: number) {
