@@ -1,6 +1,8 @@
-import { WipeHero } from "@/components/WipeHero";
+import { ScrollWipeHero } from "@/components/WipeTitle";
 import { contactContent } from "@/lib";
 
 export function ContactHero() {
-  return <WipeHero label="Contact">{contactContent.heading}</WipeHero>;
+  return (
+    <ScrollWipeHero label="Contact">{contactContent.heading}</ScrollWipeHero>
+  );
 }

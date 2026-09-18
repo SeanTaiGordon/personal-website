@@ -17,10 +17,13 @@ const {
   smoothing,
 } = motion.contact;
 
-type WipeHeroProps = {
-  label: string;
+type WipeTitleProps = {
   children: ReactNode;
   overlay?: ReactNode;
+};
+
+type ScrollWipeHeroProps = WipeTitleProps & {
+  label: string;
 };
 
 const wipeRight = keyframes`
@@ -73,7 +76,25 @@ const Heading = styled.h1`
   }
 `;
 
-export function WipeHero({ label, children, overlay }: WipeHeroProps) {
+/** Large title with a right-wipe reveal on load. */
+export function WipeTitle({ children, overlay }: WipeTitleProps) {
+  return (
+    <Stage>
+      {overlay}
+      <HeadingFrame>
+        <Wipe aria-hidden />
+        <Heading>{children}</Heading>
+      </HeadingFrame>
+    </Stage>
+  );
+}
+
+/** WipeTitle inside a horizontal scroll track. */
+export function ScrollWipeHero({
+  label,
+  children,
+  overlay,
+}: ScrollWipeHeroProps) {
   return (
     <HorizontalScroller
       label={label}
@@ -85,13 +106,7 @@ export function WipeHero({ label, children, overlay }: WipeHeroProps) {
       scrollStart={scrollStart}
       smoothing={smoothing}
     >
-      <Stage>
-        {overlay}
-        <HeadingFrame>
-          <Wipe aria-hidden />
-          <Heading>{children}</Heading>
-        </HeadingFrame>
-      </Stage>
+      <WipeTitle overlay={overlay}>{children}</WipeTitle>
     </HorizontalScroller>
   );
 }

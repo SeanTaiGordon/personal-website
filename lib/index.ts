@@ -7,6 +7,7 @@ export {
 } from "./homeContent";
 export { aboutContent, type AboutGalleryOffset } from "./aboutContent";
 export { contactContent, contactLimits } from "./contactContent";
+export { cvContent, type CvEntry, type CvSkill } from "./cvContent";
 export { recaptcha } from "./recaptcha";
 export { breakpoints, media, mq } from "./media";
 export { interp, motion, mouseTrackTransform, lerp } from "./motion";

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import styled from "styled-components";
-import { WipeHero } from "@/components/WipeHero";
+import { ScrollWipeHero } from "@/components/WipeTitle";
 import { aboutContent, media, motion, noMotionTransition } from "@/lib";
 
 const { gifOpacityMs, gifScaleMs, gifScale, humanHoverMs } = motion.about;
@@ -77,7 +77,7 @@ export function AboutHero() {
     aboutContent;
 
   return (
-    <WipeHero
+    <ScrollWipeHero
       label="About"
       overlay={
         <Gif
@@ -104,6 +104,6 @@ export function AboutHero() {
       {headingAfter}
       <br />
       <Shrug>{shrug}</Shrug>
-    </WipeHero>
+    </ScrollWipeHero>
   );
 }
