@@ -3,6 +3,8 @@ export { FadeIn } from "./FadeIn";
 export { Footer } from "./footer";
 export { HorizontalScroller } from "./HorizontalScroller";
 export { ResumeStrip } from "./ResumeStrip";
+export { WipeHero } from "./WipeHero";
+export { AboutBio, AboutGallery, AboutHero, AboutSkills } from "./about";
 export { ContactForm, ContactHero } from "./contact";
 export { Hero, IntroLinks, ProjectList, QuoteScroller } from "./home";
 export { Nav } from "./Nav";

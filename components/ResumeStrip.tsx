@@ -5,6 +5,7 @@ import { Container } from "@/components/Container";
 import { FadeIn } from "@/components/FadeIn";
 import { WipeUnderline } from "@/components/WipeUnderline";
 import {
+  displayMd,
   education,
   experiences,
   homeIntro,
@@ -20,18 +21,7 @@ const fadeInSlow = {
 
 const Summary = styled.h3`
   margin: 20px 0 -5px;
-  font-size: 60px;
-  font-weight: 600;
-  line-height: 1.3;
-
-  ${media.down("tablet")} {
-    font-size: 40px;
-  }
-
-  ${media.down("phone")} {
-    font-size: 30px;
-    font-weight: 500;
-  }
+  ${displayMd}
 `;
 
 const Spacer = styled.div`

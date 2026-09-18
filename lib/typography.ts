@@ -50,3 +50,18 @@ export const displayLg = css`
     font-size: 40px;
   }
 `;
+
+export const displayMd = css`
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.3;
+
+  ${media.down("tablet")} {
+    font-size: 40px;
+  }
+
+  ${media.down("phone")} {
+    font-size: 30px;
+    font-weight: 500;
+  }
+`;

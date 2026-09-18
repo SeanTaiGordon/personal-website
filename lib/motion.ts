@@ -95,6 +95,24 @@ export const motion = {
     formBorderMs: 200,
     submitMs: 200,
   },
+  about: {
+    gifOpacityMs: 500,
+    gifScaleMs: 300,
+    gifScale: 0.85,
+    humanHoverMs: 300,
+    skillRest: 0.2,
+    skillPeak: 1,
+    skillInStart: 0.36,
+    skillPeakAt: 0.5,
+    skillOutEnd: 0.64,
+    skillSmoothing: 0.18,
+    galleryFromYVh: 30,
+    galleryFromScale: 0.75,
+    galleryEnterEnd: 0.4,
+    galleryExitStart: 0.7,
+    gallerySmoothing: 0.18,
+    galleryMouseSmoothing: 0.2,
+  },
 } as const;
 
 export function mouseTrackTransform(xPercent: number) {

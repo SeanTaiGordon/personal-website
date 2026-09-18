@@ -5,6 +5,7 @@ export {
   homeIntro,
   type TimelineEntry,
 } from "./homeContent";
+export { aboutContent, type AboutGalleryOffset } from "./aboutContent";
 export { contactContent, contactLimits } from "./contactContent";
 export { recaptcha } from "./recaptcha";
 export { breakpoints, media, mq } from "./media";
@@ -19,4 +20,4 @@ export {
   type SiteLink,
 } from "./siteNav";
 export { linkReset, noMotionTransition } from "./styles";
-export { displayHero, displayLg, displayXl } from "./typography";
+export { displayHero, displayLg, displayMd, displayXl } from "./typography";
