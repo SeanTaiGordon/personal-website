@@ -28,5 +28,12 @@ export {
   primaryNav,
   type SiteLink,
 } from "./siteNav";
-export { linkReset, noMotionTransition } from "./styles";
-export { displayHero, displayLg, displayMd, displayXl } from "./typography";
+export { linkReset, noMotionTransition, twoCol } from "./styles";
+export {
+  copyLg,
+  displayHero,
+  displayLg,
+  displayMd,
+  displayXl,
+  label,
+} from "./typography";

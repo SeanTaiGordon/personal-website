@@ -5,7 +5,17 @@ import styled from "styled-components";
 import { Container } from "@/components/Container";
 import { FadeIn } from "@/components/FadeIn";
 import { useScrollProgress } from "@/hooks";
-import { aboutContent, displayLg, interp, media, motion, mq } from "@/lib";
+import {
+  aboutContent,
+  copyLg,
+  displayLg,
+  interp,
+  label,
+  media,
+  motion,
+  mq,
+  twoCol,
+} from "@/lib";
 
 const {
   skillRest,
@@ -18,9 +28,7 @@ const {
 
 const Heading = styled.h6`
   margin: 10px 0;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.2;
+  ${label}
 `;
 
 const Panel = styled.div`
@@ -29,14 +37,7 @@ const Panel = styled.div`
 `;
 
 const Row = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px 30px;
-  align-items: start;
-
-  ${media.down("desktop")} {
-    grid-template-columns: 1fr;
-  }
+  ${twoCol}
 `;
 
 const Title = styled.h2`
@@ -63,13 +64,7 @@ const Index = styled.span`
 
 const Body = styled.p`
   margin: 10px 0;
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 1.3;
-
-  ${media.down("tablet")} {
-    font-size: 24px;
-  }
+  ${copyLg}
 
   ${media.down("phone")} {
     font-weight: 400;

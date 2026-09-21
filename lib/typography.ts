@@ -65,3 +65,19 @@ export const displayMd = css`
     font-weight: 500;
   }
 `;
+
+export const copyLg = css`
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.3;
+
+  ${media.down("tablet")} {
+    font-size: 24px;
+  }
+`;
+
+export const label = css`
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+`;

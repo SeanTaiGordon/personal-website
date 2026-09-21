@@ -9,6 +9,7 @@ import {
   breakpoints,
   displayLg,
   interp,
+  label,
   media,
   motion,
   mq,
@@ -115,8 +116,7 @@ const Category = styled.div`
   right: 0;
   z-index: 1;
   display: flex;
-  font-size: 20px;
-  font-weight: 700;
+  ${label}
   color: var(--color-black);
   transform: translate3d(0, 0, 0);
   transition:

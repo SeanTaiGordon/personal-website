@@ -4,7 +4,7 @@ import { useCallback, useRef, type ReactNode } from "react";
 import styled from "styled-components";
 import { FadeIn } from "@/components/FadeIn";
 import { useScrollProgress } from "@/hooks";
-import { displayLg, interp, media, motion, mq } from "@/lib";
+import { displayLg, interp, media, motion, mq, twoCol } from "@/lib";
 
 const {
   skillRest,
@@ -48,14 +48,7 @@ export const Panel = styled.div`
 `;
 
 export const EntryRow = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px 30px;
-  align-items: start;
-
-  ${media.down("desktop")} {
-    grid-template-columns: 1fr;
-  }
+  ${twoCol}
 `;
 
 export const EntryTitle = styled.h2`
