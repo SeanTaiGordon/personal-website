@@ -21,8 +21,8 @@ export function useMouseTrackTranslateX() {
 
     const desktopMq = window.matchMedia(mq.desktop);
     const motionMq = window.matchMedia(mq.reduceMotion);
-    let targetX = restingX;
-    let currentX = restingX;
+    let targetX: number = restingX;
+    let currentX: number = restingX;
     let rafId = 0;
 
     const apply = (x: number) => {
