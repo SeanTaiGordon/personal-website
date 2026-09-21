@@ -216,7 +216,10 @@ function getGrecaptcha(): Grecaptcha | undefined {
 }
 
 function loadRecaptchaScript() {
-  if (!recaptchaSrc || document.querySelector(`script[src="${recaptchaSrc}"]`)) {
+  if (
+    !recaptchaSrc ||
+    document.querySelector(`script[src="${recaptchaSrc}"]`)
+  ) {
     return;
   }
 
