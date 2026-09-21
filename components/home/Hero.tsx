@@ -7,6 +7,7 @@ import { Container } from "@/components/Container";
 import { FadeIn } from "@/components/FadeIn";
 import { useScrollProgress } from "@/hooks";
 import {
+  copyLg,
   displayHero,
   homeIntro,
   interp,
@@ -181,13 +182,7 @@ const DescBlock = styled.div`
 
 const Description = styled.p`
   margin: 10px 0;
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 1.3;
-
-  ${media.down("tablet")} {
-    font-size: 24px;
-  }
+  ${copyLg}
 `;
 
 export function Hero() {

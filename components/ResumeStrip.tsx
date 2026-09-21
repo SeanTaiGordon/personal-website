@@ -9,8 +9,10 @@ import {
   education,
   experiences,
   homeIntro,
+  label,
   media,
   motion,
+  twoCol,
   type TimelineEntry,
 } from "@/lib";
 
@@ -29,14 +31,8 @@ const Spacer = styled.div`
 `;
 
 const Columns = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  ${twoCol}
   gap: 16px;
-  align-items: start;
-
-  ${media.down("desktop")} {
-    grid-template-columns: 1fr;
-  }
 `;
 
 const Column = styled.div`
@@ -47,9 +43,7 @@ const Column = styled.div`
 
 const ColumnTitle = styled.h6`
   margin: 10px 0;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.2;
+  ${label}
 `;
 
 const Entry = styled.div`
