@@ -127,6 +127,10 @@ export function lerp(start: number, end: number, t: number) {
   return start + (end - start) * t;
 }
 
+export function easeInOutQuart(t: number) {
+  return t < 0.5 ? 8 * t ** 4 : 1 - (-2 * t + 2) ** 4 / 2;
+}
+
 /** Map scroll progress 0 -> 1 through keyframes k0 -> k1 */
 export function interp(
   progress: number,
@@ -134,8 +138,9 @@ export function interp(
   v0: number,
   k1: number,
   v1: number,
+  ease: (t: number) => number = (t) => t,
 ) {
   if (progress <= k0) return v0;
   if (progress >= k1) return v1;
-  return lerp(v0, v1, (progress - k0) / (k1 - k0));
+  return lerp(v0, v1, ease((progress - k0) / (k1 - k0)));
 }
