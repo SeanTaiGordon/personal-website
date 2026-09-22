@@ -99,6 +99,15 @@ export const motion = {
     durationMs: 500,
     scrollOffsetPercent: 20,
   },
+  viewCodeModal: {
+    opacityMs: 700,
+    moveMs: 700,
+    delayMs: 600,
+    hideMs: 400,
+    offsetYPx: 16,
+    hideAfterYPx: 160,
+    showBelowYPx: 40,
+  },
   about: {
     gifOpacityMs: 500,
     gifScaleMs: 300,
