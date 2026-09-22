@@ -1,5 +1,5 @@
 import { Manrope } from "next/font/google";
-import { Footer, JsonLd, Nav } from "@/components";
+import { Footer, JsonLd, Nav, ViewCodeModal } from "@/components";
 import { buildSiteJsonLd, rootMetadata, StyledComponentsRegistry } from "@/lib";
 import "./globals.css";
 
@@ -18,6 +18,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Nav />
           <main>{children}</main>
           <Footer />
+          <ViewCodeModal />
         </StyledComponentsRegistry>
         <JsonLd data={buildSiteJsonLd()} />
       </body>

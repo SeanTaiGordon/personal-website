@@ -31,6 +31,7 @@ export {
   contactEmail,
   footerContacts,
   footerNav,
+  github,
   primaryNav,
   type SiteLink,
 } from "./siteNav";

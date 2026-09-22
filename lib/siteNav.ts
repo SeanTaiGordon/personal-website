@@ -28,3 +28,9 @@ export const footerContacts = {
     label: contactEmail,
   },
 } as const satisfies Record<string, SiteLink>;
+
+/** Source repository for the site. */
+export const github = {
+  href: "https://github.com/SeanTaiGordon/personal-website",
+  label: "View code on GitHub",
+} as const satisfies SiteLink;

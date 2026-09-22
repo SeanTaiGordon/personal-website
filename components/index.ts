@@ -10,5 +10,6 @@ export { ContactForm, ContactHero } from "./contact";
 export { CvEducation, CvExperience, CvHero, CvSkills } from "./cv";
 export { Hero, IntroLinks, ProjectList, QuoteScroller } from "./home";
 export { Nav } from "./Nav";
+export { ViewCodeModal } from "./ViewCodeModal";
 export { ProjectCard, type Project } from "./ProjectCard";
 export { WipeUnderline } from "./WipeUnderline";
