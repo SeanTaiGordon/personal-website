@@ -13,6 +13,7 @@ import {
   aboutContent,
   breakpoints,
   displayMd,
+  easeInOutQuart,
   interp,
   lerp,
   media,
@@ -173,10 +174,10 @@ const MobileShot = styled(Image)`
 function poseT(progress: number) {
   if (progress <= 0) return 0;
   if (progress < galleryEnterEnd) {
-    return interp(progress, 0, 0, galleryEnterEnd, 1);
+    return interp(progress, 0, 0, galleryEnterEnd, 1, easeInOutQuart);
   }
   if (progress < galleryExitStart) return 1;
-  return interp(progress, galleryExitStart, 1, 1, 0);
+  return interp(progress, galleryExitStart, 1, 1, 0, easeInOutQuart);
 }
 
 function GalleryGrid({

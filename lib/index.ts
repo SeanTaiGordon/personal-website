@@ -18,7 +18,13 @@ export {
   site,
 } from "./seo";
 export { breakpoints, media, mq } from "./media";
-export { interp, motion, mouseTrackTransform, lerp } from "./motion";
+export {
+  easeInOutQuart,
+  interp,
+  lerp,
+  motion,
+  mouseTrackTransform,
+} from "./motion";
 export { projects, type Project } from "./projects";
 export { StyledComponentsRegistry } from "./registry";
 export {
