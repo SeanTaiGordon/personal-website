@@ -95,6 +95,10 @@ export const motion = {
     formBorderMs: 200,
     submitMs: 200,
   },
+  pageBg: {
+    durationMs: 500,
+    scrollOffsetPercent: 20,
+  },
   about: {
     gifOpacityMs: 500,
     gifScaleMs: 300,

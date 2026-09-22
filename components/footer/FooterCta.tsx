@@ -59,7 +59,7 @@ const CtaLabel = styled.span`
   display: block;
   margin: 20px 0 10px;
   ${displayXl}
-  color: var(--color-black);
+  color: var(--page-fg);
 `;
 
 const Gap = styled.div`

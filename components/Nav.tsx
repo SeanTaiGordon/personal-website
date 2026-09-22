@@ -26,6 +26,7 @@ const {
   arrowRestXPx,
   textHoverXPx,
 } = motion.nav;
+const { durationMs: pageBgMs } = motion.pageBg;
 
 const Header = styled.header<{ $hidden: boolean }>`
   position: fixed;
@@ -50,6 +51,13 @@ const NavBackground = styled.div`
     hsla(0, 0%, 100%, 0.88) 21%,
     hsla(0, 0%, 100%, 0) 91%
   );
+  transition: opacity ${pageBgMs}ms ease;
+
+  html[data-page-bg="black"] & {
+    opacity: 0;
+  }
+
+  ${noMotionTransition}
 `;
 
 const NavBar = styled(Container)`
@@ -72,6 +80,13 @@ const Brand = styled(Link)`
   border: 3px solid var(--color-black);
   border-radius: var(--header-brand-size);
   ${linkReset}
+  transition: border-color ${pageBgMs}ms ease;
+
+  html[data-page-bg="black"] & {
+    border-color: var(--color-white);
+  }
+
+  ${noMotionTransition}
 `;
 
 const BrandImage = styled(Image)`
@@ -133,7 +148,12 @@ const NavArrow = styled(Image)`
   transform: translate3d(${arrowRestXPx}px, 0, 0);
   transition:
     opacity ${arrowFadeMs}ms ease,
-    transform ${arrowFadeMs}ms ease;
+    transform ${arrowFadeMs}ms ease,
+    filter ${pageBgMs}ms ease;
+
+  html[data-page-bg="black"] & {
+    filter: invert(1);
+  }
 
   ${media.down("desktop")} {
     display: none;
@@ -147,8 +167,9 @@ const NavLink = styled(Link)`
   display: inline-block;
   margin-left: 40px;
   padding: 10px 20px;
-  color: var(--color-black);
+  color: var(--page-fg);
   ${linkReset}
+  transition: color ${pageBgMs}ms ease;
 
   /* Desktop: text shifts left, arrow slides in. */
   ${media.up("desktop")} {
@@ -169,10 +190,13 @@ const NavLink = styled(Link)`
     padding: 12px 0;
     font-size: 28px;
     font-weight: 700;
+    color: var(--color-black);
   }
+
+  ${noMotionTransition}
 `;
 
-const MenuButton = styled.button`
+const MenuButton = styled.button<{ $open: boolean }>`
   position: relative;
   z-index: 2;
   display: none;
@@ -191,6 +215,13 @@ const MenuButton = styled.button`
     outline: 2px solid var(--color-black);
     outline-offset: 2px;
   }
+
+  html[data-page-bg="black"] & img {
+    filter: ${({ $open }) => ($open ? "none" : "invert(1)")};
+    transition: filter ${pageBgMs}ms ease;
+  }
+
+  ${noMotionTransition}
 `;
 
 export function Nav() {
@@ -264,6 +295,7 @@ export function Nav() {
         <MenuButton
           ref={menuButtonRef}
           type="button"
+          $open={open}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           aria-controls={menuId}

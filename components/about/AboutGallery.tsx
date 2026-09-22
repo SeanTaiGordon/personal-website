@@ -4,7 +4,11 @@ import Image from "next/image";
 import { useCallback, useRef, type RefObject } from "react";
 import styled, { css } from "styled-components";
 import { FadeIn } from "@/components/FadeIn";
-import { useGalleryMouseParallax, useScrollProgress } from "@/hooks";
+import {
+  useGalleryMouseParallax,
+  usePageBackgroundInvert,
+  useScrollProgress,
+} from "@/hooks";
 import {
   aboutContent,
   breakpoints,
@@ -262,6 +266,7 @@ export function AboutGallery() {
   });
 
   useGalleryMouseParallax({ gridRef, captionRef, shotRefs });
+  usePageBackgroundInvert(sectionRef);
 
   return (
     <Section ref={sectionRef} aria-label="Front-end projects">

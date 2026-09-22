@@ -47,7 +47,6 @@ const FooterNav = styled.nav`
 const NavLink = styled(WipeUnderline)`
   display: block;
   margin: 0 15px 10px 5px;
-  color: var(--color-black);
   font-size: 20px;
 
   ${media.down("tablet")} {
