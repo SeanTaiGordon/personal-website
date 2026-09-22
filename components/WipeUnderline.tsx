@@ -38,7 +38,7 @@ const PlaceholderTrack = styled.span`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color-black-20);
+  background-color: var(--page-fg-20);
   pointer-events: none;
   ${thickHeights}
 `;
@@ -50,7 +50,7 @@ const Underline = styled.span<{ $phase: WipePhase; $thick?: boolean }>`
   z-index: 1;
   width: 100%;
   height: ${({ $thick }) => ($thick ? `${thickHeightPx.base}px` : `${thinHeightPx}px`)};
-  background-color: var(--color-black);
+  background-color: var(--page-fg);
   transform: translate3d(
     ${({ $phase }) => {
       if ($phase === "in") return "0";
@@ -74,7 +74,7 @@ const linkStyles = css`
   display: inline-block;
   overflow: hidden;
   padding-bottom: 5px;
-  color: var(--color-black);
+  color: var(--page-fg);
   ${linkReset}
 `;
 

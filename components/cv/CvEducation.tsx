@@ -1,9 +1,11 @@
 "use client";
 
+import { useRef } from "react";
 import styled from "styled-components";
 import { Container } from "@/components/Container";
 import { FadeIn } from "@/components/FadeIn";
 import { EntryPanel, SectionPill } from "@/components/cv/CvPanels";
+import { usePageBackgroundInvert } from "@/hooks";
 import { cvContent, media } from "@/lib";
 
 const Section = styled.section`
@@ -18,8 +20,11 @@ const Section = styled.section`
 `;
 
 export function CvEducation() {
+  const sectionRef = useRef<HTMLElement>(null);
+  usePageBackgroundInvert(sectionRef);
+
   return (
-    <Section>
+    <Section ref={sectionRef}>
       <Container>
         <FadeIn offsetYPx={0}>
           <SectionPill $invert>{cvContent.educationHeading}</SectionPill>
